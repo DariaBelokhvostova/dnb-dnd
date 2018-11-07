@@ -4,11 +4,16 @@
       <title>dnb-dnd</title>
       <link rel="Shortcut Icon" href="https://image.winudf.com/v2/image/Y29tLmdmcy5xZF9pY29uXzBfOWIwM2E0ZDA/icon.png?w=170&fakeurl=1&type=.png">
       <style>
+          * {
+            box-sizing: border-box;
+          }
+
           body {
             background-image: url('https://blog.visme.co/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-048.jpg');
             background-repeat: repeat;
             background-attachment: fixed;
           }
+
           .header {
             background-color: #ffffff;
             padding: 20px;
@@ -17,15 +22,25 @@
             font-size: 35px;
             color: black;
           }
+
           .column {
             float: right;
+            padding: 10px;
           }
+
           .column.side {
             width: 25%;
           }
+
           .column.middle {
             width: 50%;
           }
+
+          .row:after {
+            content: "";
+            display: table;
+            clear: both;
+}
       </style>
     </head>
 
@@ -33,13 +48,17 @@
       <div class="header">
           <h1>HEADER</h1>
       </div>
-      <div class="column.side">
+
+      <div class="row">
+        <div class="column side">
         <h2>TITLE</h2>
       </div>
-    </div>
-    <div class="column.middle">
-      <h2>TITLE</h2>
-    </div>
+
+      <div class= "column middle">
+        <h2>TITLE</h2>
+      </div>
+
+
     </body>
 
     </html>
