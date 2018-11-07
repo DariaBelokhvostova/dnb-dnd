@@ -21,8 +21,28 @@
         font-size: ;
         position: relative;
         z-index: 10;
-        height: 100px;        
+        height: 100px;
       }
+      .Container {
+        display: flex;
+        overflow: hidden;
+        height: 100vh;
+        margin-top: -100px;
+        padding-top: 100px;
+        position: relative;
+        width: 100%;
+        backface-visibility: hidden;
+        will-change: overflow;
+      }
+      .Left,
+      .Middle,
+      .Right {
+        overflow: auto;
+        height: auto;
+        padding: .5rem;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: none;
+     }
       </style>
       <body>
         <div class="Top">Top Content</div>
