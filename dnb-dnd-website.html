@@ -5,32 +5,68 @@
       <link rel="Shortcut Icon" href="https://image.winudf.com/v2/image/Y29tLmdmcy5xZF9pY29uXzBfOWIwM2E0ZDA/icon.png?w=170&fakeurl=1&type=.png">
       <style>
 
-      .flex-container {
-        display: flex;
-        flex-direction: row;
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
         background-image: url('https://blog.visme.co/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-048.jpg');
         background-repeat: repeat;
         background-attachment: fixed;
-}
+      }
 
-      .flex-containermaincontent > div {
-        background-color: #f1f1f1;
-        width: 200px;
-        margin: 10px;
+      .header {
+        background-color: #ffffff;
+        padding: 20px;
+        margin: 20px;
         text-align: center;
-        line-height: 75px;
-        font-size: 30px;
-}
+        font-size: 35px;
+        color: black;
+      }
 
+      .column {
+        float: right;
+        padding: 10px;
+      }
+
+      .column.side {
+        width: 25%;
+        background-color: #ffffff;
+        text-align: center;
+        font-size: 16px;
+        color: black;
+      }
+
+      .column.middle {
+        width: 50%;
+        background-color: #ffffff;
+        text-align: center;
+        font-size: 16px;
+        color: black;
+      }
+
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
       </style>
+
     </head>
 
     <body>
-      <div class="flex-containermaincontent">
-        <div>1</div>
-        <div>2</div>
+      <div class="header">
+          <h1>HEADER</h1>
       </div>
 
+      <div class="row">
+        <div class="column side">
+        <h2>TITLE</h2>
+      </div>
+
+      <div class= "column middle">
+        <h2>TITLE</h2>
+      </div>
     </body>
 
 </html>
