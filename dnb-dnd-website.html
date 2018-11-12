@@ -40,9 +40,6 @@ function scrollFunction() {
 }
 </script>
 
-</head>
-
-
 <style>
 
 head
@@ -76,6 +73,10 @@ div#top {
             position: fixed;
             top: 0;
             width: 80%;
+            z-index: 9999;
+            font-size: 25px;
+            padding: 20px;
+            height: 80px;
             transition: 0.5s; /* Add a transition effect (when scrolling - and font size is decreased) */
           }
 
@@ -89,10 +90,9 @@ div.col-sm-2 a {
   background-color: #99c2ff;
   padding: 100px 10px;
   width:80%;
-  position: absolute;
+  position: relative;
   height: 3000px;
-  position = "relative";
-  top: 130px;
+  padding: 100px;
   }
 
   div#footer {
@@ -113,32 +113,26 @@ div.col-sm-2 a {
 
 </style>
 
+</head>
+
+
+
+
 
 
 
 
 <body>
 
-<div class="scrolly">
+  <div class="scrolly">
+    <p1>Main text</p1>
+  </div>
+  <div id="footer" class="containter">
+    <p1>All rights reserved</p1>
+  </div>
 
-</div>
 
 
-<script>
-$(document).scroll(function() {
-    var y = $(document).scrollTop(), //get page y value
-        header = $(".scrolly"); // your div id
-    if(y >= 500)  {
-        header.css({position: "static", "top" : "0", "left" : "0"});
-    } else {
-        header.css("position", "static");
-    }
-});
-</script>
-
-<div id="footer" class="containter">
-  <p1>All rights reserved</p1>
-</div>
 
 
 </body>
