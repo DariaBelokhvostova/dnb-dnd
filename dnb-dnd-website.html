@@ -1,41 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <title>dnb-dnd</title>
-      <link rel="Shortcut Icon" href="https://image.winudf.com/v2/image/Y29tLmdmcy5xZF9pY29uXzBfOWIwM2E0ZDA/icon.png?w=170&fakeurl=1&type=.png">
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    </head>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 
-    <style>
-      body {
-        background-image: url('https://blog.visme.co/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-048.jpg');
-        background-repeat: repeat;
-        background-attachment: fixed;
+  <title>dnb-dnd</title>
+  <link rel="Shortcut Icon" href="https://image.winudf.com/v2/image/Y29tLmdmcy5xZF9pY29uXzBfOWIwM2E0ZDA/icon.png?w=170&fakeurl=1&type=.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <div id="top" class="container" "well well-lg">
+      <div class = "row">
+<!--  <div class='w3-bar-item'> -->
+  <div class="col-sm-2"> <a href="##">Home</a>      </div>
+  <div class="col-sm-2"> <a href="##">Campaigns</a> </div>
+
+  <div class="col-sm-1">     </div>
+  <div class="col-sm-2">  <img src="https://i.imgur.com/YKapOtO.jpg" alt="Logo">    </div>
+  <div class="col-sm-1">     </div>
+  <div class="col-sm-2"> <a href="##">Contact</a> </div>
+  <div class="col-sm-2"> <a href='##'>About</a>   </div>
+     </div>
+   </div>
+
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("top").style.fontSize = "15px";
+    document.getElementById("top").style.padding = "20px 20px 20px 20px";
+    document.getElementById("top").style.height = "55px";
+  } else {
+    document.getElementById("top").style.fontSize = "25px";
+    document.getElementById("top").style.padding = "20px 20px 20px 20px";
+    document.getElementById("top").style.height = "80px";
       }
-      </style>
+}
+</script>
 
-<!-- This is just a spacer because I keep getting confused ;) -->
+</head>
 
-      <body>
-        <div class="jumbotron text-center">
-          <h1>Header goes here</h>
-          <p>cool navigation stuff pew pew pew</p>
-        </div>
 
-        <div class="container" "well well-lg">
-          <div class="row">
-            <div class="col-sm-8" style="background-color: white">
-              <h2>Main content</h2>
-            </div>
-            <div class="col-sm-4" style="background-color: white">
-              <h2>Cool side bar stuff woooo!</h2>
-            </div>
-          </div>
+<style>
 
-      </body>
+head
+{
+  position: relative;
+  left:10%;
+  width:80%;
+  }
 
-</html>
+body
+{
+  background-image: url('https://vignette.wikia.nocookie.net/sfery/images/3/35/Forgotten_realms_map_full.jpg/revision/latest/scale-to-width-down/640?cb=20140217145747');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  position: relative;
+  height: 3000px;
+  left: 10%;
+}
+
+div#top div.w3-bar-item a
+ {
+   color:white;
+   text-decoration: none;
+ }
+
+div#top {
+            background: #e00808;
+            color:white;
+            text-align: center;
+            font-weight: bold;
+            position: fixed;
+            top: 0;
+            width: 80%;
+            transition: 0.5s; /* Add a transition effect (when scrolling - and font size is decreased) */
+          }
+
+div.col-sm-2 a {
+  color: white;
+  text.decoration: none;
+}
+
+.scrolly
+{
+  background-color: #99c2ff;
+  padding: 100px 10px;
+  width:80%;
+  position: absolute;
+  height: 3000px;
+  position = "relative";
+  top: 130px;
+  }
+
+  div#footer {
+    background: #e00808;
+    padding: 10px 10px 10px;
+    margin: 0px 0px 0px 0px;
+    color:white;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    position: relative;
+    bottom: 0px;
+    width: 80%;
+    height: 40px;
+    /*  transition: 0.2s; /* Add a transition effect (when scrolling - and font size is decreased) */
+  }
+
+
+</style>
+
+
+
+
+
+<body>
+
+<div class="scrolly">
+
+</div>
+
+
+<script>
+$(document).scroll(function() {
+    var y = $(document).scrollTop(), //get page y value
+        header = $(".scrolly"); // your div id
+    if(y >= 500)  {
+        header.css({position: "static", "top" : "0", "left" : "0"});
+    } else {
+        header.css("position", "static");
+    }
+});
+</script>
+
+<div id="footer" class="containter">
+  <p1>All rights reserved</p1>
+</div>
+
+
+</body>
