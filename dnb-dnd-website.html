@@ -13,34 +13,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!--navbar-->
-  <div id="top" class="container" "well well-lg">
+  <div id="top" class = "containter-fluid">
       <div class = "row">
   <div class="col-sm-2"> <a href="##">Home</a>      </div>
-  <div class="col-sm-2"> <a href="##">Campaigns</a> </div>
+  <div class="col-sm-2"> <div class="dropdown">
+                        <button class="dropbtn">Campaigns </button>
+      <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div>
+     <a href="##">Campaigns</a> </div>
 
   <div class="col-sm-1">     </div>
-  <div class="col-sm-2">  <img src="https://i.imgur.com/YKapOtO.jpg" alt="Logo">    </div>
+  <div class="col-md-2">  <img id="Logo" src="C:\Users\Dasha\Documents\GitHub_materials\Pictures for DnD website\logo-silver.png"
+    alt="Logo" height = "120px" width = "120px">
+      </div>
   <div class="col-sm-1">     </div>
   <div class="col-sm-2"> <a href="##">Contact</a> </div>
   <div class="col-sm-2"> <a href='##'>About</a>   </div>
      </div>
    </div>
-
-<script>
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById("top").style.fontSize = "15px";
-    document.getElementById("top").style.padding = "20px 20px 20px 20px";
-    document.getElementById("top").style.height = "55px";
-  } else {
-    document.getElementById("top").style.fontSize = "25px";
-    document.getElementById("top").style.padding = "20px 20px 20px 20px";
-    document.getElementById("top").style.height = "80px";
-      }
-}
-</script>
 
 <style>
 
@@ -87,6 +81,48 @@ div.col-sm-2 a {
   text.decoration: none;
 }
 
+/* Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
 .scrolly
 {
   background-color: #99c2ff;
@@ -112,6 +148,13 @@ div.col-sm-2 a {
     /*  transition: 0.2s; /* Add a transition effect (when scrolling - and font size is decreased) */
   }
 
+img#Logo {
+      width: 120px;
+      height: 120px;
+      margin: 10px;
+      padding: 10px;
+}
+
 
 </style>
 
@@ -136,5 +179,19 @@ div.col-sm-2 a {
 
 
 
+  <script>
+  window.onscroll = function() {scrollFunction()};
 
+  function scrollFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      document.getElementById("top").style.fontSize = "15px";
+      document.getElementById("top").style.padding = "20px 20px 20px 20px";
+      document.getElementById("top").style.height = "55px";
+    } else {
+      document.getElementById("top").style.fontSize = "25px";
+      document.getElementById("top").style.padding = "20px 20px 20px 20px";
+      document.getElementById("top").style.height = "80px";
+          }
+  }
+  </script>
 </body>
