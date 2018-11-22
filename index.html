@@ -115,6 +115,30 @@ body {
   left: 10%;
   }
 
+.item1 { grid-area: leftcontentbox; }
+.item2 { grid-area: righttopbox; }
+.item3 { grid-area: rightbottombox; }
+
+.grid-container  {
+    position: relative;
+    top: 200px;
+    display: grid;
+    grid-template-areas:
+    'leftcontentbox leftcontentbox leftcontentbox leftcontentbox righttopbox righttopbox'
+    'leftcontentbox leftcontentbox leftcontentbox leftcontentbox rightbottombox rightbottombox';
+    grid-gap: 10px;
+    background-color: #99c2ff;
+    padding: 10px;
+    }
+
+.grid-container > div {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    }
+
+
 #footer {
     background: #e00808;
     padding: 10px 10px 10px;
@@ -183,9 +207,17 @@ body {
    </div>
  </header>
 
-  <div class="scrolly">
-    <p1>Main text</p1>
-  </div>
+ <div class="scrolly">
+   <div class="grid-container">
+      <div class="item1">Left content box</div>
+      <div class="item2">Right top box</div>
+      <div class="item3">Right bottom box</div>
+    </div>
+ </div>
+
+
+
+
   <div id="footer" class="containter">
     <p1>All rights reserved</p1>
   </div>
