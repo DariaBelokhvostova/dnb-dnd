@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
   <!--libraries-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- webpage title icon-->
   <title>dnb-dnd</title>
   <link rel="Shortcut Icon" href="https://image.winudf.com/v2/image/Y29tLmdmcy5xZF9pY29uXzBfOWIwM2E0ZDA/icon.png?w=170&fakeurl=1&type=.png">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <style>
 body {
       background-image: url('https://vignette.wikia.nocookie.net/sfery/images/3/35/Forgotten_realms_map_full.jpg/revision/latest/scale-to-width-down/640?cb=20140217145747');
@@ -35,7 +35,7 @@ body {
       color:white;
       text-align: center;
       font-weight: bold;
-     position: fixed;
+      position: fixed;
       top: 150px;
       width: 80%;
       left: 10%;
@@ -110,32 +110,31 @@ body {
   padding: 100px 10px;
   width: 80%;
   position: relative;
-  height: 3000px;
+  height: 1200px;
   left: 10%;
   }
 
-.item1 { grid-area: leftcontentbox; }
-.item2 { grid-area: righttopbox; }
-.item3 { grid-area: rightbottombox; }
+  .item1 { grid-area: leftcontentbox; }
+  .item2 { grid-area: righttopbox; }
+  .item3 { grid-area: rightbottombox; }
 
-.grid-container  {
-    position: relative;
-    top: 200px;
-    display: grid;
-    grid-template-areas:
-    'leftcontentbox leftcontentbox leftcontentbox leftcontentbox leftcontentbox righttopbox'
-    'leftcontentbox leftcontentbox leftcontentbox leftcontentbox leftcontentbox rightbottombox';
-    grid-gap: 10px;
-    background-color: #99c2ff;
-    padding: 10px;
-    }
+  .grid-container  {
+      position: relative;
+      top: 160px;
+      display: grid;
+      grid-template-areas:
+      'leftcontentbox leftcontentbox leftcontentbox leftcontentbox leftcontentbox righttopbox'
+      'leftcontentbox leftcontentbox  leftcontentbox leftcontentbox leftcontentbox rightbottombox';
+      grid-gap: 20px;
+      padding: 10px;
+      }
 
-.grid-container > div {
-    background-color: #ffffff;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 30px;
-    }
+  .grid-container > div {
+      background-color: #ffffff;
+      text-align: center;
+      padding: 10px;
+      font-size: 30px;
+      }
 
 
 #footer {
@@ -150,7 +149,7 @@ body {
     left:10%;
     bottom: 0px;
     width: 80%;
-    height: 40px;
+    height: 70px;
     /*  transition: 0.2s; /* Add a transition effect (when scrolling - and font size is decreased) */
   }
 
@@ -163,6 +162,37 @@ body {
       margin: 20px;
       position: relative;
       color: #0000;
+  }
+
+
+.fa {
+  padding: 1px;
+  font-size: 30px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 1px 2px;
+
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  color: white;
+}
+
+.fa-twitter {
+  color: white;
+}
+
+.fa-instagram {
+  color: white;
+}
+
+.fa-envelope {
+  color: white;
 }
 
 
@@ -213,11 +243,9 @@ body {
 
  <div class="scrolly">
    <div class="grid-container">
-      <div class="item1">Left content box</div>
-      <div class="item2"><a class="twitter-timeline" data-width="220" data-height="450" data-link-color="#E81C4F" href="https://twitter.com/RPGCommunityLDN?ref_src=twsrc%5Etfw">Tweets by RPGCommunityLDN</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      </div>
-
-      <div class="item3"></div>
+     <div class="item1">Left content box</div>
+      <div class="item2"><a class="twitter-timeline" data-width="220" data-height="350" data-link-color="#E81C4F" href="https://twitter.com/RPGCommunityLDN?ref_src=twsrc%5Etfw">Tweets by RPGCommunityLDN</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+      <div class="item3">right bottom</div>
     </div>
  </div>
 
@@ -225,9 +253,17 @@ body {
 
 
   <div id="footer" class="containter">
-    <p1>All rights reserved</p1>
+    <!--Facebook-->
+  <a class="btn-floating btn-lg btn-fb" type="button" role="button" href="https://www.facebook.com/RPGCommunityLDN/" target="_blank"><i class="fa fa-facebook"></i></a>
+  <!--Twitter-->
+  <a class="btn-floating btn-lg btn-tw" type="button" role="button" href="https://twitter.com/rpgcommunityldn" target="_blank"><i class="fa fa-twitter"></i></a>
+  <!--Instagram-->
+  <a class="btn-floating btn-lg btn-ins" type="button" role="button" href="https://www.instagram.com/rpgcommunityldn/?utm_source=ig_profile_share&igshid=1ly9japlujds1" target="_blank"><i class="fa fa-instagram"></i></a>
+  <!--Email-->
+  <a class="btn-floating btn-lg btn-email" type="button" role="button"><i class="fa fa-envelope"></i></a>
+  <br>
+  <p>All rights reserved</p>
   </div>
-
   <script>
 
 window.onscroll = function() {scrollFunction()};
