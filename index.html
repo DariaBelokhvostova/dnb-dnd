@@ -114,28 +114,16 @@ body {
   left: 10%;
   }
 
-  .item1 { grid-area: leftcontentbox; }
-  .item2 { grid-area: righttopbox; }
-  .item3 { grid-area: rightbottombox; }
+  .col-sm-9 {
+    position: relative;
+    top: 160px;
+    background-color: white;
+    text-align: center;}
 
-  .grid-container  {
-      position: relative;
-      top: 160px;
-      display: grid;
-      grid-template-areas:
-      'leftcontentbox leftcontentbox leftcontentbox leftcontentbox leftcontentbox righttopbox'
-      'leftcontentbox leftcontentbox  leftcontentbox leftcontentbox leftcontentbox rightbottombox';
-      grid-gap: 20px;
-      padding: 10px;
-      }
-
-  .grid-container > div {
-      background-color: #ffffff;
-      text-align: center;
-      padding: 10px;
-      font-size: 30px;
-      }
-
+  .col-sm-3  {
+    top: 160px;
+    background-color: white;
+    text-align: center;}
 
 #footer {
     background: #e00808;
@@ -242,12 +230,18 @@ body {
  </header>
 
  <div class="scrolly">
-   <div class="grid-container">
-     <div class="item1">Left content box</div>
-      <div class="item2"><a class="twitter-timeline" data-width="220" data-height="350" data-link-color="#E81C4F" href="https://twitter.com/RPGCommunityLDN?ref_src=twsrc%5Etfw">Tweets by RPGCommunityLDN</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
-      <div class="item3">right bottom</div>
+   <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row">
+        <div class="col-sm-9" style= "width: 72%; left: 15px;" >
+        <p>text</p></div>
+        <div class="col-sm-3" style= "width: 20%; position: fixed; top: 260px; right: 150px;">
+        <a class="twitter-timeline" data-width="300" data-height="450" data-link-color="#E81C4F" href="https://twitter.com/RPGCommunityLDN?ref_src=twsrc%5Etfw">Tweets by RPGCommunityLDN</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
     </div>
- </div>
+</div>
+
 
 
 
