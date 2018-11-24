@@ -27,23 +27,23 @@ body {
       z-index: 1000;
       width: 80%;
       left: 10%;
-      height: 180px;
+
 }
 
 #top {
       background: #e00808;
       color:white;
       text-align: center;
-      font-weight: bold;
-      position: fixed;
+      position: relative;
       top: 150px;
+      font-weight: bold;
       width: 80%;
       left: 10%;
       z-index: 9999;
       font-size: 25px;
       padding: 20px;
       height: 80px;
-      transition: 0.3s; /* Add a transition effect (when scrolling - and font size is decreased) */
+      transition: 0s;/* Add a transition effect (when scrolling - and font size is decreased) */
               }
 
 .col-sm-2 a {
@@ -99,8 +99,26 @@ body {
 
 /* The sticky class is added to the #top bar with JS when it reaches its scroll position */
 .sticky {
-  position: fixed;
-  top: 0;
+  position: fixed !important;
+  top: 0px !important;
+}
+
+.nonsticky {
+  position: relative;
+  top: 150px;
+}
+
+.twitscroll {
+  position: fixed !important;
+  top:100px !important;
+  right: 11% !important;
+  width: 20% !important;
+
+}
+
+.twitnoscroll {
+  position: absolute !important;
+  top: 200px !important;
 }
 
 
@@ -142,14 +160,13 @@ body {
   }
 
 #Logo a{
-      background-image: url("https://pbs.twimg.com/profile_images/1062359950192771072/s9HpIoFA_400x400.jpg");
-      background-size: cover;
+/*      background-image: url("https://pbs.twimg.com/profile_images/1062359950192771072/s9HpIoFA_400x400.jpg"); */
+      background-image: url("https://cdn.discordapp.com/attachments/515974223580102656/515975040022609993/LOGO-BORDER2.png");
+      background-size: contain;
       background-repeat: no-repeat;
-      transition: 0.3s;
-      padding: 25px 0px 25px 0px;
-      margin: 20px;
-      position: relative;
+      padding: 40px 20px 50px 30px;
       color: #0000;
+      z-index: 9999;
   }
 
 
@@ -211,13 +228,8 @@ body {
           </div>
         </div>
       </div>
-      <div class="col-sm-1">
-      </div>
-      <div class="col-md-2" id="Logo">
+      <div class="col-md-4" id="Logo">
         <a href='##'>LOGO</a>
-
-      </div>
-      <div class="col-sm-1">
       </div>
       <div class="col-sm-2">
         <a href="##">Contact</a>
@@ -237,7 +249,7 @@ body {
     <div class="row">
         <div class="col-sm-9" style= "width: 72%; left: 15px;" >
         <p>text</p></div>
-        <div class="col-sm-3" style= "width: 20%; position: fixed; top: 260px; right: 150px;">
+        <div class="col-sm-3" id="twitterbox" style= "position: absolute; top: 200px; right: 1%;">
         <a class="twitter-timeline" data-width="300" data-height="450" data-link-color="#E81C4F" href="https://twitter.com/RPGCommunityLDN?ref_src=twsrc%5Etfw">Tweets by RPGCommunityLDN</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
     </div>
 </div>
@@ -247,7 +259,7 @@ body {
 
 
   <div id="footer" class="containter">
-    <!--Facebook-->
+  <!--Facebook-->
   <a class="btn-floating btn-lg btn-fb" type="button" role="button" href="https://www.facebook.com/RPGCommunityLDN/" target="_blank"><i class="fa fa-facebook"></i></a>
   <!--Twitter-->
   <a class="btn-floating btn-lg btn-tw" type="button" role="button" href="https://twitter.com/rpgcommunityldn" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -258,15 +270,17 @@ body {
   <br>
   <p>All rights reserved</p>
   </div>
+
+
   <script>
 
 window.onscroll = function() {scrollFunction()};
 
   // Get the navbar
-var top = document.getElementById("top");
+var navbar = document.getElementById("top");
 // Get the offset position of the navbar
-var sticky = top.offsetTop;
-
+var sticky = navbar.offsetTop;
+var twitbox = document.getElementById("twitterbox")
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
   function scrollFunction() {
   /*  if (window.pageYOffset >= sticky) {
@@ -275,23 +289,30 @@ var sticky = top.offsetTop;
       top.classList.remove("sticky");
     }
     */
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+
+    if (document.body.scrollTop > 160 || document.documentElement.scrollTop > 160) {
+
       document.getElementById("top").style.fontSize = "15px";
-      document.getElementById("top").style.height = "55px";
-      document.getElementById("Logo").style.height = "100px";
-      document.getElementById("Logo").style.width = "100px";
-    /*  document.getElementById("Logo").style.margin = "0px";
-      document.getElementById("Logo").style.padding = "0px"; */
-      top.classList.add("sticky");
+      document.getElementById("top").style.height = "60px";
+      navbar.classList.remove("nonsticky")
+      navbar.classList.add("sticky");
+      twitbox.classList.remove("twitnoscroll")
+      twitbox.classList.add("twitscroll");
+      document.getElementById("Logo").style.padding = "30px";
+
     } else {
       document.getElementById("top").style.fontSize = "25px";
       document.getElementById("top").style.height = "80px";
-      document.getElementById("Logo").style.height = "120px";
-      document.getElementById("Logo").style.width = "120px";
-      top.classList.remove("sticky");
-  /*    document.getElementById("Logo").style.margin = "10px";
-      document.getElementById("Logo").style.padding = "10px"; */
+      navbar.classList.remove("sticky");
+      navbar.classList.add("nonsticky");
+      twitbox.classList.add("twitnoscroll")
+      twitbox.classList.remove("twitscroll");
+      document.getElementById("Logo").style.padding = "5px";
           }
   }
+
+
+
+
   </script>
 </body>
