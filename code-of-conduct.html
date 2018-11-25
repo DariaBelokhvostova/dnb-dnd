@@ -10,14 +10,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <script>
-$(document).ready(function(){
-    $("#flip").click(function(){
-        $("#panel").slideDown("slow");
-    });
-});
-</script>
-
 
 
   <!-- webpage title icon-->
@@ -150,7 +142,7 @@ body {
     position: relative;
     top: 100px;
     background-color: white;
-    text-align: center;
+    text-align: left;
     padding: 10px 10px 10px 10px;
   }
 
@@ -217,15 +209,34 @@ body {
 
 #panel, #flip {
     padding: 10px;
-    text-align: center;
-    background-color: #e5eecc;
-    border: solid 1px #c3c3c3;
+    text-align: left;
+    background-color: #ff6666;
+    border: solid 1px white;
 }
 
 #panel {
     padding: 20px;
     display: none;
   }
+
+  #panel2, #flip2 {
+      padding: 10px;
+      text-align: left;
+      background-color: #ff6666;
+      border: solid 1px white;
+  }
+
+  #panel2 {
+      padding: 20px;
+      display: none;
+    }
+
+
+  h1 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 23px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 23px; }
+  h3 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 17px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 23px; }
+  p { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; }
+  blockquote { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 17px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; }
+  pre { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 11px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; }
 
 </style>
 
@@ -279,8 +290,68 @@ body {
     <div class="row"></div>
     <div class="row">
         <div class="col-sm-9" style= "width: 72%; left: 15px;" >
-          <div id="flip">Click to slide down panel</div>
-      <div id="panel">Hello world!</div>
+
+          <h1><center>Code of Conduct</center></h1>
+          <br>
+          <p><strong>The London RPG Community is committed to providing a safe and welcoming environment for participating in role-playing games and other activities.<strong></p>
+          <br>
+          <p>It’s so important to have open and positive games, so we do not tolerate any kind of harassment. We will take action in response to harassment related to national origin, gender, gender identity and expression, race, ethnicity, sexual orientation, physical characteristics, disability, religion, and age.</p>
+          <br>
+      <div id="flip">Unacceptable behaviour</div>
+      <div id="panel">Harassment may occur online or in person. Examples of unacceptable behaviours include:
+        <ol>
+          <br>
+         <li>Verbal comments that reinforce oppression related to gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, race, ethnicity, age or religion (or lack thereof);</li>
+         <br>
+         <li>Imitating or making fun of accents or grammatical errors, or giving unsolicited grammar corrections (but clarifying questions are fine);</li>
+         <br>
+         <li>Verbal threats or demands;</li>
+         <br>
+         <li>Sexualized images in public spaces;</li>
+         <br>
+         <li>Intimidation;</li>
+         <br>
+         <li>Stalking;</li>
+         <br>
+         <li>Harassing photography or recording;</li>
+         <br>
+         <li>Sustained disruption of games or events;</li>
+         <br>
+         <li>Unwelcome physical contact or sexual attention;</li>
+         <br>
+         <li>Drugging food or drink;</li>
+         <br>
+         <li>Enlisting the help of others, whether in person or online, in order to target an attendee;</li>
+         <br>
+         <li>Gender assumptions and policing;</li>
+         <br>
+         <li>Advocating for or encouraging any of the above behaviour.</li>
+         <br>
+        <ol>
+</div>
+      <br>
+      <p>
+        Participants who are asked to stop harassing behaviours are expected to cease immediately. Depending on severity of harassment or repeat offenses, GMs or event hosts will respond appropriately, including but not limited to giving warnings or expulsion from the event. With the consent of the person being harassed, local authorities will be called if needed.
+      <br>
+      <br>
+        We count on <strong>everyone</strong> to do their part to ensure positive experiences for all participants. <strong>If you are being harassed, notice that someone else is being harassed, or have any other concerns, please let us know.</strong>
+      </p>
+      <br>
+
+      <div id="flip2">Reporting violations</div>
+  <div id="panel2">Reports can be made confidentially by doing one of the following:
+    <br>
+    <br>
+    <ol>
+     <li>Speaking to a GM or event host or messaging them via Meetup</li>
+     <br>
+     <li>Twitter Direct Message to <a href="https://twitter.com/rpgcommunityldn" target= "_blank" style="color: white">@RPGCommunityLDN</a> </li>
+   </ol>
+   <br>
+     <strong>All reports are confidential.</strong> You will not be asked to take actions that make you feel unsafe.
+
+</div>
+
       </div>
         <div class="col-sm-3" id="twitterbox" style= "position: absolute; top: 200px; right: 1%;">
         <a class="twitter-timeline" data-width="300" data-height="550" data-link-color="#E81C4F" href="https://twitter.com/RPGCommunityLDN?ref_src=twsrc%5Etfw">Tweets by RPGCommunityLDN</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
@@ -304,8 +375,21 @@ body {
   <p> © 2018 London RPG Community </p>
 </div>
 
+<script>
+$(document).ready(function(){
+  $("#flip").click(function(){
+      $("#panel").slideToggle("slow");
+  });
+});
+</script>
 
-
+<script>
+$(document).ready(function(){
+  $("#flip2").click(function(){
+      $("#panel2").slideToggle("slow");
+  });
+});
+</script>
 
 
   <script>
