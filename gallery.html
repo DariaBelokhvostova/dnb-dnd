@@ -9,6 +9,11 @@
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+  <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+	<link href='simplelightbox-master/dist/simplelightbox.min.css' rel='stylesheet' type='text/css'>
+	<link href='demo.css' rel='stylesheet' type='text/css'>
+
+
   <!-- webpage title icon-->
   <title>dnb-dnd</title>
   <link rel="Shortcut Icon" href="https://image.winudf.com/v2/image/Y29tLmdmcy5xZF9pY29uXzBfOWIwM2E0ZDA/icon.png?w=170&fakeurl=1&type=.png">
@@ -140,6 +145,7 @@ body {
     top: 100px;
     background-color: white;
     text-align: center;
+    padding: 10px 10px 10px 10px;
   }
 
 .col-sm-3  {
@@ -204,6 +210,9 @@ body {
 }
 
 
+
+
+
 </style>
 
 </head>
@@ -256,9 +265,26 @@ body {
     <div class="row"></div>
     <div class="row">
         <div class="col-sm-9" style= "width: 72%; left: 15px;" >
-        <p>Gallery</p></div>
+
+          <a href="Gallery/image1.jpg"><img src="Gallery/Thumbs/thumb1.jpg" alt="" title="image1" height="305px" width="241px"/></a>
+          <a href="Gallery/image2.jpg"><img src="Gallery/Thumbs/thumb2.jpg" alt="" title="image2" height="305px" width="241px"/></a>
+          <a href="Gallery/image3.jpg"><img src="Gallery/Thumbs/thumb3.jpg" alt="" title="image3" height="305px" width="241px"/></a>
+          <div class="clear"></div>
+
+          <a href="Gallery/image4.jpg"><img src="Gallery/Thumbs/thumb4.jpg" alt="" title="image4" height="305px" width="241px"/></a>
+          <a href="Gallery/image5.jpg"><img src="Gallery/Thumbs/thumb5.jpg" alt="" title="image5" height="305px" width="241px"/></a>
+          <a href="Gallery/image6.jpg"><img src="Gallery/Thumbs/thumb6.jpg" alt="" title="image6" height="305px" width="241px"/></a>
+          <a href="Gallery/image7.jpg"><img src="Gallery/Thumbs/thumb7.jpg" alt="" title="image7" height="305px" width="241px"/></a>
+          <a href="Gallery/image8.jpg"><img src="Gallery/Thumbs/thumb8.jpg" alt="" title="image8" height="305px" width="486px"/></a>
+          <div class="clear"></div>
+</div>
+
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+          <script type="text/javascript" src="simplelightbox-master/dist/simple-lightbox.js"></script>
+
+        </div>
         <div class="col-sm-3" id="twitterbox" style= "position: absolute; top: 200px; right: 1%;">
-        <a class="twitter-timeline" data-width="300" data-height="450" data-link-color="#E81C4F" href="https://twitter.com/RPGCommunityLDN?ref_src=twsrc%5Etfw">Tweets by RPGCommunityLDN</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+        <a class="twitter-timeline" data-width="300" data-height="550" data-link-color="#E81C4F" href="https://twitter.com/RPGCommunityLDN?ref_src=twsrc%5Etfw">Tweets by RPGCommunityLDN</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
     </div>
 </div>
 
@@ -309,6 +335,52 @@ var twitbox = document.getElementById("twitterbox")
       document.getElementById("Logo").style.padding = "5px";
           }
   }
+
+
+    $(function(){
+      var $gallery = $('.gallery a').simpleLightbox();
+
+      $gallery.on('show.simplelightbox', function(){
+        console.log('Requested for showing');
+      })
+      .on('shown.simplelightbox', function(){
+        console.log('Shown');
+      })
+      .on('close.simplelightbox', function(){
+        console.log('Requested for closing');
+      })
+      .on('closed.simplelightbox', function(){
+        console.log('Closed');
+      })
+      .on('change.simplelightbox', function(){
+        console.log('Requested for change');
+      })
+      .on('next.simplelightbox', function(){
+        console.log('Requested for next');
+      })
+      .on('prev.simplelightbox', function(){
+        console.log('Requested for prev');
+      })
+      .on('nextImageLoaded.simplelightbox', function(){
+        console.log('Next image loaded');
+      })
+      .on('prevImageLoaded.simplelightbox', function(){
+        console.log('Prev image loaded');
+      })
+      .on('changed.simplelightbox', function(){
+        console.log('Image changed');
+      })
+      .on('nextDone.simplelightbox', function(){
+        console.log('Image changed to next');
+      })
+      .on('prevDone.simplelightbox', function(){
+        console.log('Image changed to prev');
+      })
+      .on('error.simplelightbox', function(e){
+        console.log('No image found, go to the next/prev');
+        console.log(e);
+      });
+    });
 
 
 
