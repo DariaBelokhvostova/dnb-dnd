@@ -247,6 +247,8 @@ body {
   width: 25%;
 }
 
+
+
 /* The Modal (background) */
 .modal {
   display: none;
@@ -258,7 +260,7 @@ body {
   width: 80%;
   height: 100%;
   overflow: auto;
-  background-color: grey;
+  background-image: radial-gradient(#d6e6ff 5%, #80b3ff);
 }
 
 /* Modal Content */
@@ -267,6 +269,7 @@ body {
   background-color: #fefefe;
   margin: auto;
   padding: 10px;
+  bottom: 5px;
   width: 64%;
   max-width: 1200px;
 }
@@ -518,6 +521,12 @@ function openModal() {
 function closeModal() {
   document.getElementById('myModal').style.display = "none";
 }
+
+$("#myModal").mouseenter(function(){
+   $("body").css("overflow", "hidden");
+}).mouseleave(function(){
+   $("body").css("overflow", "visible");
+});
 
 var slideIndex = 1;
 showSlides(slideIndex);
