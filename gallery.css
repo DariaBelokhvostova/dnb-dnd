@@ -247,7 +247,7 @@ body {
 /* Modal Content */
 .modal-content {
   position: absolute;
-  left: 45px;
+  left: 80px;
   background-color: #fefefe;
   margin: auto;
   padding: 10px;
