@@ -17,6 +17,7 @@ body {
       background-image: url('https://vignette.wikia.nocookie.net/sfery/images/3/35/Forgotten_realms_map_full.jpg/revision/latest/scale-to-width-down/640?cb=20140217145747');
       background-repeat: repeat;
       background-attachment: fixed;
+      height: 3000px;
   /*   position: relative;
       height: 3000px;
       left: 10%; */
@@ -27,6 +28,7 @@ body {
       z-index: 1000;
       width: 80%;
       left: 10%;
+      height: 170px;
 
 }
 
@@ -131,16 +133,23 @@ body {
   padding: 100px 10px;
   width: 80%;
   position: relative;
-  height: 1200px;
+  height: 3000px;
   left: 10%;
   }
 
 .col-sm-9 {
     position: relative;
-    top: 100px;
+    top: 120px;
     background-color: white;
     text-align: left;
+    height: 2300px;
+
   }
+
+.col-sm-9 a {
+  color:red;
+
+}
 
 .col-sm-3  {
     top: 160px;
@@ -209,6 +218,37 @@ p { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px
 blockquote { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 17px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; }
 pre { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 11px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; }
 
+#Kantas {
+  position: relative;
+  left: 5px;
+  top: 100px;
+
+}
+
+#players_guide {
+  border-color: red;
+}
+
+#downloadable {
+  float: left;
+  padding-left: 200px;
+
+}
+#downloadable img{
+box-shadow: 5px 10px;
+}
+#guide {
+  float: right;
+  padding-top: 70px;
+  padding-right: 120px;
+  font-size: 25px;
+  font-style: oblique;
+  width: 55%;
+  line-height: 35px;
+
+}
+
+
 </style>
 
 </head>
@@ -259,9 +299,30 @@ pre { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 11
     <div class="row"></div>
     <div class="row"></div>
     <div class="row"></div>
+    <img id="Kantas" src="Images/Kantas_Expanse3-Meetup_Covers.jpg" alt="Kantas" width="70%">
     <div class="row">
-        <div class="col-sm-9" style= "width: 72%; left: 15px;" >
-
+        <div class="col-sm-9" style= "width: 70%; left: 15px;" >
+          <h1><center> Welcome to Kantas Expanse! </center></h1>
+          <br>
+          <p class="main-text">
+            You are adventurers who have come to this far distant land via portal to seek fame, fortune, and probably more fame and more fortune in the small frontier town of Daring Heights...
+          <br>
+          <br>
+          The Kantas Expanse is an ongoing series of games, a cross between a campaign and one-shot adventures in style of Ars Ludi’s <a href="http://rollplaywestmarches.wikia.com/wiki/The_Rules">West Marches</a> Campaign. Here you will continue to adventure in these lands, following up on rumours you hear in the local tavern here in Daring Heights. There are a few things you should know:
+          <br>
+          <ul>
+            <li> We run games for Kantas Expanse games every week on Tuesday in Holborn and on Wednesday in Greenwich, but due to the standalone nature of each session you can play as often or as infrequently as you like without issue. </li>
+            <br><li> If you are new: to sign up your first game simply join any <a href=”http://www.meetup.com/LondonRPGCommunity/”>meet up</a> with a tag (Beginner friendly). You will need a level 2 character. Create one beforehand, <a href="https://dariabelokhvostova.github.io/dnb-dnd/contact.html">contact your DM</a> for assistance, or come early to make one! Check out our <a href=”http://thekantasexpanse.boards.net/”>forum</a> or <a href=”https://thekantasexpanse.obsidianportal.com/”>wiki pages</a> for the feel of the campaign</li>
+            <br><li> If you have played with us before: sign up to any rumour on our <a href=”http://thekantasexpanse.boards.net/”>forum</a> and enjoy an adventure that your character would love. Or better – create your own rumour! Our DMs like to tailor the session according to players’ ideas.</li>
+          </ul>
+        </p>
+        <br>
+          <a id="downloadable" href="Players_guide_to_Kantas.pdf" download>
+            <img src="Images/players_guide.jpg" alt="Player's Guide to Kantas" height="200px"> </a>
+          <p id="guide"> Player's Guide to Kantas is a great resource to get you quick-started! </p>
+          <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br> <br>
+          <p> Good luck out there. The Kantas Expanse is a dangerous place, and the tiny town of Daring Heights is the precious home we have here. </p>
+              </div>
       </div>
         <div class="col-sm-3" id="twitterbox" style= "position: absolute; top: 200px; right: 1%;">
         <a class="twitter-timeline" data-width="300" data-height="550" data-link-color="#E81C4F" href="https://twitter.com/RPGCommunityLDN?ref_src=twsrc%5Etfw">Tweets by RPGCommunityLDN</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
@@ -281,6 +342,7 @@ pre { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 11
   <a class="btn-floating btn-lg btn-ins" type="button" role="button" href="https://www.instagram.com/rpgcommunityldn/?utm_source=ig_profile_share&igshid=1ly9japlujds1" target="_blank"><i class="fa fa-instagram"></i></a>
   <!--Email-->
   <a class="btn-floating btn-lg btn-email" type="button" role="button"><a href="mailto:daria.belokhvostova@kcl.ac.uk"><i class="fa fa-envelope"></i></a></a>
+  <br>
   <br>
   <p2> © 2018 London RPG Community </p2>
 </div>

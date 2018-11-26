@@ -34,7 +34,7 @@ body {
 
 .closebtn {
     position: absolute;
-    bottom: 20px;
+    top: 20px;
     right: 40px;
     font-size: 60px;
     color: white;
@@ -46,10 +46,11 @@ body {
 
 #welcome_p {
   position: absolute;
-  bottom: 40px;
-  right: 70px;
+  top: 50px;
+  right: 80px;
   font-size: 20px;
   color: white;
+  font-family: Impact;
 }
 
 #headerbackground {
@@ -57,6 +58,7 @@ body {
       z-index: 1000;
       width: 80%;
       left: 10%;
+      height: 170px;
 
 }
 
@@ -104,7 +106,6 @@ body {
       position: absolute;
       background-color: #e00808;
       min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       z-index: 1;
 }
 
@@ -243,15 +244,15 @@ body {
 <body>
 
 <div class="container" id="welcome">
-  <img id="welcome-image" src="welcome-image.jpeg" alt="welcome-image" width="100%" height="630px">
-  <p id="welcome_p"> Welcome! Click here to proceed -> </p>
+  <img id="welcome-image" src="welcome-image.jpeg" alt="welcome-image" width="100%" height="700px">
+  <p id="welcome_p"> Welcome! Click here to proceed </p>
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 </div>
 
 
 
 <div class="container">
-   <img id="headerbackground" src="headerbackground.png"   class="center" alt="headerbackground">
+   <img id="headerbackground" src="headerbackground.png" class="center" alt="headerbackground">
 </div>
 
 <header>
